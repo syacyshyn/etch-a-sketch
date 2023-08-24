@@ -19,8 +19,68 @@
     position: absolute;
 }
 
-#tv-and-etch-board-container {
-    width: 600px;
-    height: 400px;
+#relative-container {
+    min-width: 600px;
+    min-height: 400px;
+    max-width: 600px;
+    max-height: 400px;
     position: relative;
+}
+
+#settings-button {
+    border-style: dashed;
+    border-color: white;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50%;
+    padding-top: 5px;
+    background-color: orange;
+    right: 70px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#settings-container {
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    bottom: 100px;
+    background-color: orange;
+    padding: 15px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    border-style: dashed;
+    border-color: white;
+    display: none;
+}
+
+#black-button, #rainbow-button {
+    background: white;
+    border-style: none;
+    /*border-color: pink;*/
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#black-button {
+    opacity: 0.6;
+}
+
+#black-button:hover, #rainbow-button:hover, #settings-button:hover {
+    opacity: 1;
+}
+
+#rainbow-button {
+    background-color: black;
+    opacity: 1;
+}
+
+#grid-size-slider {
+    padding-top: 5px;
+    color: orange;
+    cursor: pointer;
 }
