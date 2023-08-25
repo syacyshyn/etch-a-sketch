@@ -13,6 +13,7 @@
     top: 20px;
     left: 90px;
     display: grid;
+    border-style: solid;
 }
 
 #tv-image {
@@ -28,16 +29,24 @@
 }
 
 #settings-button {
-    border-style: dashed;
-    border-color: white;
     position: absolute;
     bottom: 20px;
     border-radius: 50%;
     padding-top: 5px;
-    background-color: orange;
     right: 70px;
     cursor: pointer;
     opacity: 0.7;
+    width: 2rem;
+    height: 2rem;
+    transition-duration: 0.3s;
+}
+
+#settings-button:hover {
+    transform: scale(1.2);
+}
+
+#settings-button:active {
+    transform: scale(1.0);
 }
 
 #settings-container {
@@ -45,13 +54,11 @@
     position: absolute;
     right: 10px;
     bottom: 100px;
-    background-color: orange;
+    background-color: lightskyblue;
     padding: 15px;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-    border-style: dashed;
-    border-color: white;
     display: none;
 }
 
@@ -67,7 +74,7 @@
 }
 
 #black-button {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 #black-button:hover, #rainbow-button:hover, #settings-button:hover {
@@ -75,12 +82,32 @@
 }
 
 #rainbow-button {
-    background-color: black;
+    background: linear-gradient(red, blue);
     opacity: 1;
+    color: white;
 }
 
 #grid-size-slider {
-    padding-top: 5px;
-    color: orange;
+    margin-top: 8px;
     cursor: pointer;
+}
+
+#reset-button {
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+    background-color: lightskyblue;
+    border-style: none;
+    padding: 8px;
+    border-radius: .5rem;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    transform: scale(1.2);
+}
+
+#reset-button:active {
+    transform: scale(1.0);
 }

@@ -26,7 +26,7 @@ function createGrid(totalNumberOfSquaresInGrid) {
     etchASketchBoard.style.gridTemplateColumns = `repeat(${numberOfRows}, 1fr)`;
     for (let i = 0; i < numberOfRows * numberOfRows; i++) {
          const oneSquare = document.createElement('div');
-         oneSquare.setAttribute("style", "background: white; border-style: solid;");
+         oneSquare.setAttribute("style", "background: white; border-style: none;");
          etchASketchBoard.appendChild(oneSquare);
          oneSquare.onmouseover = function () {
              if (colorSelector === "black") {
@@ -45,6 +45,10 @@ function removeAllChildNodes(parent) {
 }
 
 const slider = document.querySelector("#grid-size-slider");
+window.onload = function () {
+    createGrid(4);
+}
+
 slider.addEventListener("input", () => {
     removeAllChildNodes(etchASketchBoard);
     console.log(slider.value);
@@ -66,3 +70,11 @@ if (colorSelector === "rainbow") {
     rainbowButton.style.opacity = "1";
 }
 
+let resetButton = document.getElementById("reset-button");
+
+resetButton.onclick = function () {
+    const currentSquares = etchASketchBoard.children;
+    for (let eachSquare of currentSquares) {
+        eachSquare.style.backgroundColor = "white";
+    }
+}
